@@ -9,7 +9,7 @@ pipeline{
         }
         stage('Date'){
             steps{
-                sh 'DATE'
+                sh '$date'
             }
         }
         stage('cpu usage'){
