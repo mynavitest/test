@@ -22,5 +22,10 @@ pipeline{
                 sh 'free -h'
             }
         }
+        stage('disk usage'){
+            steps{
+                sh 'df -h'
+            }
+        }   
     }
 }
