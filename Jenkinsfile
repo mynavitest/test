@@ -17,5 +17,10 @@ pipeline{
                 sh 'ps -eo pid,user,%cpu,comm --sort=-%cpu | head -10'
             }
         }
+        stage('memory usage'){
+            steps{
+                sh 'free -h'
+            }
+        }
     }
 }
