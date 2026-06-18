@@ -14,7 +14,7 @@ pipeline{
         }
         stage('cpu usage'){
             steps{
-                sh 'free -hf'
+                sh 'ps -eo pid,user,%cpu,comm --sort=-%cpu | head -10'
             }
         }
     }
