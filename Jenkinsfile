@@ -1,19 +1,20 @@
 pipeline{
     agent any
     stages{
-        stage('Build'){
+        stage('Server Details'){
             steps{
-                echo 'Building...'
+                echo 'Server Details'
+                sh 'uname -a'
             }
         }
-        stage('Test'){
+        stage('Date'){
             steps{
-                echo 'Testing...'
+                sh 'DATE'
             }
         }
-        stage('Deploy'){
+        stage('cpu usage'){
             steps{
-                echo 'Deploying...'
+                sh 'free -hf'
             }
         }
     }
